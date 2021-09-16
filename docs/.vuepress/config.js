@@ -27,7 +27,6 @@ module.exports = {
         "type": "text/javascript",
         "src": "https://agou-images.oss-cn-qingdao.aliyuncs.com/gtag.js"
       }],
-    
   ],
 
   //主题配置
