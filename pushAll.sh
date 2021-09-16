@@ -8,14 +8,11 @@ rsync -av --progress ./docs/* ../myDocs/docs/src/ --exclude ./docs/.vuepress/ --
 
 echo -e "\n\n ========================= \n"
 
-git add -A
-git commit -m "rebuilding site $(date)"
-git push --set-upstream origin master
+/usr/bin/sh ./push.sh
 
 echo  "缓一缓"
 sleep 1
 
 cd ../myDocs/docs
-git add -A
-git commit -m "rebuilding site $(date)"
-git push --set-upstream origin master
+
+/usr/bin/sh ./push.sh
