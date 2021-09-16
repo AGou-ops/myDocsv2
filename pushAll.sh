@@ -10,7 +10,7 @@ echo -e "\n\n ========================= \n"
 
 git add -A
 git commit -m "rebuilding site $(date)"
-git push 
+git push --set-upstream origin master
 
 echo  "缓一缓"
 sleep 1
@@ -18,4 +18,4 @@ sleep 1
 cd ../myDocs/docs
 git add -A
 git commit -m "rebuilding site $(date)"
-git push 
+git push --set-upstream origin master
