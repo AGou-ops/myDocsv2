@@ -25,7 +25,7 @@ module.exports = {
     ["script", {
         "language": "javascript",
         "type": "text/javascript",
-        "src": "https://agou-images.oss-cn-qingdao.aliyuncs.com/gtag.js"
+        "src": "/js/gtag.js"
       }],
   ],
 
