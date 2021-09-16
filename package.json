@@ -35,6 +35,8 @@
 		"whatwg-fetch": "3.0.0"
 	},
 	"devDependencies": {
-		"vuepress-plugin-dynamic-title": "^1.0.0"
+		"vuepress-plugin-cat": "^1.0.3",
+		"vuepress-plugin-dynamic-title": "^1.0.0",
+		"vuepress-plugin-reading-progress": "^1.0.10"
 	}
 }

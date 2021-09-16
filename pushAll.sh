@@ -11,7 +11,7 @@ echo -e "\n\n ========================= \n"
 /usr/bin/sh ./push.sh
 
 echo  "缓一缓"
-sleep 1
+sleep 0.5
 
 cd ../myDocs/docs
 

@@ -18,7 +18,7 @@ chart是一个组织在文件目录中的集合。目录名称就是chart名称�
 
 在这个目录中，Helm 期望可以匹配以下结构：
 
-```text
+```
 wordpress/
   Chart.yaml          # 包含了chart信息的YAML文件
   LICENSE             # 可选: 包含chart许可证的纯文本文件
@@ -80,7 +80,7 @@ annotations:
 
 比如 `nginx` chart的版本字段`version: 1.2.3`按照名称被设置为：
 
-```text
+```
 nginx-1.2.3.tgz
 ```
 
@@ -221,7 +221,7 @@ Downloading mysql from repo https://another.example.com/charts
 
 当 `helm dependency update` 拉取chart时，会在`charts/`目录中形成一个chart包。因此对于上面的示例，会在chart目录中期望看到以下文件：
 
-```text
+```
 charts/
   apache-1.2.3.tgz
   mysql-3.2.1.tgz
@@ -252,7 +252,7 @@ dependencies:
 
 上述例子中，我们会获得`parentchart`所有的3个依赖项：
 
-```text
+```
 subchart
 new-subchart-1
 new-subchart-2
@@ -812,7 +812,7 @@ CRD 文件 _无法模板化_，必须是普通的YAML文档。
 
 比如，如果您的chart在`crds/`目录中有针对于`CronTab`的CRD，您可以在`templates/`目录中创建`CronTab`类型实例：
 
-```text
+```
 crontabs/
   Chart.yaml
   crds/

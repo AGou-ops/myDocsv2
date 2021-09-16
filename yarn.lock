@@ -8402,6 +8402,11 @@ vuepress-plugin-boxx@0.0.7:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-boxx/-/vuepress-plugin-boxx-0.0.7.tgz#8337d27eaf5b3f609eb7befdb3681ce5f0eac17c"
   integrity sha512-UeBl8ZCSy4wT2uh9lsO0GpIC3QaVI5gcZbs4TZ/2wMNHJ71IRXorisGe9DDSjlTU8q3vNq837tBnC8Jyq3cVXA==
 
+vuepress-plugin-cat@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-cat/-/vuepress-plugin-cat-1.0.3.tgz#efbac43981ae4dee55c8726b347b7ba272052654"
+  integrity sha512-1tronr8K/02Qn7M/+cOa5zYGfY/qlWLAqJjpT3FKYX4BsHEn9KEDnjJ7t9SyCPKpV68e8IP6XJvPZYTQ0Qs90w==
+
 vuepress-plugin-catalog-graph@^0.2.8:
   version "0.2.8"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-catalog-graph/download/vuepress-plugin-catalog-graph-0.2.8.tgz#1d090d0aac0522bd0a065417115ed071f832f3eb"
@@ -8450,6 +8455,11 @@ vuepress-plugin-nuggets-style-copy@^1.0.3:
   integrity sha512-0v+9i8ZkD0a87nxH/KGioJE6Szeh5ZMBQxRyjEyeUo3B/OSXuuED9ih6+JW2e3LKbsxkza1ZAv8dVXNurKXtFw==
   dependencies:
     clipboard "^2.0.4"
+
+vuepress-plugin-reading-progress@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-progress/-/vuepress-plugin-reading-progress-1.0.10.tgz#0b9d44e27d583ff20e0307993aa4cbda49f3bdca"
+  integrity sha512-7OxcjNEDf9gqFTns0YnXrqPnTRlX6wvxWFr7D8tlfyMPpsZwJkh/MkJveRrEaKcU0gk8QGmPHnXLAZ3soTThVg==
 
 vuepress-plugin-sitemap@2.3.0:
   version "2.3.0"

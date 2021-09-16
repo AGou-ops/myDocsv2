@@ -22,6 +22,12 @@ module.exports = {
       "type": "text/javascript",
       "src": "https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"
     }],
+    ["script", {
+        "language": "javascript",
+        "type": "text/javascript",
+        "src": "https://agou-images.oss-cn-qingdao.aliyuncs.com/gtag.js"
+      }],
+    
   ],
 
   //主题配置
