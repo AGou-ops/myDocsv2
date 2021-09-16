@@ -1,14 +1,3 @@
----
-title: Ansible_basic
-date: 2020-09-07
-tags:
-- "开发规范"
-- Java
-categories:
-- "后端"
-isShowComments: true
----
-
 # Ansible Basic
 
 ## 简介
