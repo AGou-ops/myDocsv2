@@ -5,7 +5,7 @@ const CARD_IMG_LIST = 'cardImgList'
 
 module.exports = [
     'reading-progress',
-    'vuepress-plugin-cat',
+    '@vuepress-reco/vuepress-plugin-kan-ban-niang',
     [
         "dynamic-title",
         {

@@ -1039,6 +1039,11 @@
   resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-extract-code/-/vuepress-plugin-extract-code-1.0.3.tgz#aed545a2ef13f52d92c1c904efc2225c89b99d2c"
   integrity sha512-b8NQKZfGMybIrmLKQp3NQO4zo+hzOEOBzHT6gYOc9Lc0YCB3ZziTniVIUApbGVE7SJYnDFVZrTAWCzrfl+fipA==
 
+"@vuepress-reco/vuepress-plugin-kan-ban-niang@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-kan-ban-niang/-/vuepress-plugin-kan-ban-niang-1.0.5.tgz#73b47094f1a07af05923fe9ae6c25a4c33586168"
+  integrity sha512-ufqpOw0zhLxv3PvoYlHTsjmG4CFiCaQ8dnf950Ov7JmajKgpAMarZ3ObB+xi5ex0sgetxU82YSf+CptQceXQIw==
+
 "@vuepress-reco/vuepress-plugin-loading-page@1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-loading-page/-/vuepress-plugin-loading-page-1.0.5.tgz#384486fa7ab7780b9282bb557ea41431047f081f"
@@ -8401,11 +8406,6 @@ vuepress-plugin-boxx@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-boxx/-/vuepress-plugin-boxx-0.0.7.tgz#8337d27eaf5b3f609eb7befdb3681ce5f0eac17c"
   integrity sha512-UeBl8ZCSy4wT2uh9lsO0GpIC3QaVI5gcZbs4TZ/2wMNHJ71IRXorisGe9DDSjlTU8q3vNq837tBnC8Jyq3cVXA==
-
-vuepress-plugin-cat@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-cat/-/vuepress-plugin-cat-1.0.3.tgz#efbac43981ae4dee55c8726b347b7ba272052654"
-  integrity sha512-1tronr8K/02Qn7M/+cOa5zYGfY/qlWLAqJjpT3FKYX4BsHEn9KEDnjJ7t9SyCPKpV68e8IP6XJvPZYTQ0Qs90w==
 
 vuepress-plugin-catalog-graph@^0.2.8:
   version "0.2.8"
