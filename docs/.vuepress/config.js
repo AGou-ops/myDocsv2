@@ -96,9 +96,22 @@ module.exports = {
                         ["/Golang/Golang Package manage", "Golang Package manage"],
                         ["/Golang/Golang Pkgs", "Golang Pkgs"],
                         ["/Golang/Golang Testing", "Golang Testing"],
+                        ["/Golang/Golang File Operate", "Golang File Operate"],
                     ]
                 }, ],
-                "/k8s/": [{
+                "/k8s/": [
+                    {
+                        title: "K8s Installation",
+                        path: "/k8s/Installation/",
+                        collapsable: true,
+                        children: [
+                            ["/k8s/Installation/Kubernetes 二进制安装", "Kubernetes 二进制安装"],
+                            ["/k8s/Installation/使用 Kubeadm 部署(单master)", "使用 Kubeadm 部署(单master)"],
+                            ["/k8s/Installation/使用 Kubespray 部署", "使用 Kubespray 部署"],
+                            ["/k8s/Installation/使用国内源及相关小工具", "使用国内源及相关小工具"],
+                        ]
+                    },
+                    {
                     title: "k8s 快速手册",
                     path: "/k8s/",
                     collapsable: true,
@@ -176,8 +189,6 @@ module.exports = {
 
             }
   },
-
-
 }
 
 
@@ -360,6 +371,7 @@ function getGuideSidebar() {
                         ["/post/Docker & Kubernetes & Micro Services/Kubernetes/kompose Basic", "kompose Basic"],
                         ["/post/Docker & Kubernetes & Micro Services/Kubernetes/kubenetes远程调试工具", "kubenetes远程调试工具"],
                         ["/post/Docker & Kubernetes & Micro Services/Kubernetes/Minikube Basic", "Minikube Basic"],
+                        ["/post/Docker & Kubernetes & Micro Services/Kubernetes/Kubernetes REST API","Kubernetes REST API"],
                     ]
                 },
                 {

@@ -24,6 +24,7 @@
   - `kubectl get pods -l environment=production,tier=frontend`
 - `kubectl apply-validate-f pod.yaml`: 检查yaml文件格式是否有错误之处;
 - `kubectl apply -R DIR/`: 递归应用目录中的配置清单文件;
+- `kubectl get componentstatuses`: 检查控制平台组件的状态；
 
 
 
