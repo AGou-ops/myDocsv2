@@ -45,7 +45,7 @@ mc.exe --help
 ```bash
 # 添加minio服务
 mc config host add minio-server http://10.0.0.18:9000 [ACCESS_KEY] [SECRET_KEY]
-mc config host add ali-oss https://oss-cn-hangzhou.aliyuncs.com LTAI5tBimhasgtZHmgeLEKm3 PixunIW3rPYaoL9xLXfShMK978UnWi
+mc config host add ali-oss https://oss-cn-hangzhou.aliyuncs.com [ACCESS_KEY] [SECRET_KEY]
 # 输入以上命令之后会提示输入access key和secret key
 
 # 查看minio服务配置

@@ -162,6 +162,7 @@ module.exports = {
                 "/post/FileSystem/": getGuideSidebar(),
                 "/post/FileSystem/Ceph/": getGuideSidebar(),
                 "/post/FileSystem/GlusterFS/": getGuideSidebar(),
+                "/post/FileSystem/MinIO/": getGuideSidebar(),
                 "/post/HAProxy/": getGuideSidebar(),
                 "/post/Kafka/": getGuideSidebar(),
                 "/post/KVM/": getGuideSidebar(),
@@ -436,6 +437,15 @@ function getGuideSidebar() {
                     collapsable: true,
                     children: [
                         ["/post/FileSystem/GlusterFS/临时", "临时"],
+                    ]
+                },
+                {
+                    title: "MinIO",
+                    path: "/post/FileSystem/MinIO",
+                    collapsable: true,
+                    children: [
+                        ["/post/FileSystem/MinIO/MinIO Basic", "MinIO Basic"],
+                        ["/post/FileSystem/MinIO/MinIO in Docker", "MinIO in Docker"],
                     ]
                 },
                 ["/post/FileSystem/NFS 基础及实战", "NFS 基础及实战"],

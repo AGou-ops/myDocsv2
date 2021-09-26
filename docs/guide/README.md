@@ -178,6 +178,7 @@
 	│   │   └── <a href="/myDocsv2/post/FileSystem/GlusterFS/%E4%B8%B4%E6%97%B6.html">临时</a><br>
 	│   ├── <a href="/myDocsv2/post/FileSystem/index.html">index</a><br>
 	│   ├── <a href="/myDocsv2/post/FileSystem/MinIO/">MinIO</a><br>
+	│   │   ├── <a href="/myDocsv2/post/FileSystem/MinIO/index.html">index</a><br>
 	│   │   ├── <a href="/myDocsv2/post/FileSystem/MinIO/MinIO%20Basic.html">MinIO Basic</a><br>
 	│   │   └── <a href="/myDocsv2/post/FileSystem/MinIO/MinIO%20in%20Docker.html">MinIO in Docker</a><br>
 	│   ├── <a href="/myDocsv2/post/FileSystem/NFS%20%E5%9F%BA%E7%A1%80%E5%8F%8A%E5%AE%9E%E6%88%98.html">NFS 基础及实战</a><br>
@@ -333,7 +334,7 @@
 	</p>
 	<p>
 
-48 directories, 252 files
+48 directories, 253 files
 	<br><br>
 	</p>
 	<hr>
