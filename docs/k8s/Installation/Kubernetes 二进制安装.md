@@ -2462,7 +2462,7 @@ etcd-0               Healthy   {"health":"true"}
 
 ### 10.4.部署Nginx+Keepalived实现kubernetes高可用集群
 
-keepalived是主流的高可用软件，基于VIP绑定实现服务器的双机热备，可以理解为keepalived是针对服务器IP的高可用集群，如果A机器当机了，B机器会立刻成为master角色，抢占VIP地址，使其不间断的提供服务，从而形成高可用集群。
+keepalived是主流的高可用软件，基于VIP绑定实现服务器的双机热备，可以理解为keepalived是针对服务器IP的高可用集群，如果A机器宕机了，B机器会立刻成为master角色，抢占VIP地址，使其不间断的提供服务，从而形成高可用集群。
 
 使用nginx+keepalived做得k8s master节点高可用集群，只要master节点上面没有etcd组件，那么整个集群master节点只要有一个工作正常，整个集群就不会宕机。
 
