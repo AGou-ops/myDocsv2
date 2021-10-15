@@ -43,6 +43,7 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     smoothScroll: true,
+    noFoundPageByTencent: false,
     sidebarDepth: 2,
     // blogConfig: {
     //   category: {
@@ -97,10 +98,11 @@ module.exports = {
                         ["/Golang/Golang Pkgs", "Golang Pkgs"],
                         ["/Golang/Golang Testing", "Golang Testing"],
                         ["/Golang/Golang File Operate", "Golang File Operate"],
+                        ["/Golang/Golang Json","Golang Json"],
+                        ["/Golang/Golang 并发","Golang 并发"]
                     ]
                 }, ],
-                "/k8s/": [
-                    {
+                "/k8s/": [{
                         title: "K8s Installation",
                         path: "/k8s/Installation/",
                         collapsable: true,
@@ -152,11 +154,12 @@ module.exports = {
                     path: "/k8s/",
                     collapsable: false,
                     children: [
-                        ["/k8s/k3d","k3d"],
-                        ["/k8s/k8s command","k8s command"],
+                        ["/k8s/Kubernetes Yaml quicklystart","⭐k8s Yaml quicklystart"],
+                        ["/k8s/k8s command","⭐k8s command quicklystart"],
                         ["/k8s/kompose Basic","kompose Basic"],
                         ["/k8s/kubenetes远程调试工具","kubenetes远程调试工具"],
                         ["/k8s/Kubernetes REST API","Kubernetes REST API"],
+                        ["/k8s/k3d","k3d"],
                         ["/k8s/Minikube Basic","Minikube Basic"],
                         ["/k8s/Remote access k8s","Remote access k8s"],
                     ]
