@@ -25,6 +25,7 @@
 - `kubectl apply-validate-f pod.yaml`: 检查yaml文件格式是否有错误之处;
 - `kubectl apply -R DIR/`: 递归应用目录中的配置清单文件;
 - `kubectl get componentstatuses`: 检查控制平台组件的状态；
+- `kubectl logs kube-scheduler-master01 -n kube-system`：获取调度器日志，包括调度记录，打分记录等；
 
 
 

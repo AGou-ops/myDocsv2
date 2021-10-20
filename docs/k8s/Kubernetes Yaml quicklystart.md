@@ -30,7 +30,7 @@ spec:						# 必选,Pod中容器的详细定义
   - name: string			# 必选,容器名称
     image: string			# 必选,容器的镜像名称
     imagePullPolicy: [ Always | Never |IfNotPresent ]		# 获取镜像的策略
-	command:[string] 				# 容器的启动命令列表,如不指定，使用打包时使用的启动命令
+	command: [string] 				# 容器的启动命令列表,如不指定，使用打包时使用的启动命令
     args: [string]					# 容器的启动命令参数列表
     workingDir: string			     # 容器的工作目录
     volumeMounts:					# 挂载到容器内部的存储卷配置
@@ -238,7 +238,7 @@ spec:
 
 ```yaml
 [root@k8s-master ~]# kubectl explain pod.spec.affinity.nodeAffinity
-requiredDuringSchedulingIgnoredDuringExecution	<Object>		# node节点必须满足所有规则才可以，相当于硬限制
+requiredDuringSchedulingIgnoredDuringExecution	<Object>		# node节点必须满足所有规则才可以，相当于硬限制，（这名字真是有够长的），不会驱逐已经存在并运行的pod
 nodeSelectorTerms	<[]Object>				# 定义节点选择列表，也就是定义具体匹配规则
  matchFields  <Object>						# 根据节点字段列出的节点选择器要求选择
    key										# 键
@@ -249,7 +249,7 @@ nodeSelectorTerms	<[]Object>				# 定义节点选择列表，也就是定义具�
    operator							# 关系符，支持Exists、DoesNotExist、In、NotIN、Gt、Lt
    values							# 值，标签值
    
-preferredDuringSchedulingIgnoredDuringExecution	<[]Object>		# 优先调度到满足指定规则的Node，相当于软限制
+preferredDuringSchedulingIgnoredDuringExecution	<[]Object>		# 优先调度到满足指定规则的Node，相当于软限制，（这名字真是有够长的），不会驱逐已经存在并运行的pod
 preference	<Object>						# 节点选择器，与权重关联，可以定义多个，多个prefence如何选择就要看权重设置的大小
  matchFields  <Object>						# 根据节点字段进行匹配
    key	
@@ -260,6 +260,37 @@ preference	<Object>						# 节点选择器，与权重关联，可以定义多�
    operator								# 关系符，支持Exists、DoesNotExist、In、NotIN、Gt、Lt			
    values  								# 值，标签值
 weight      									# 设置权重，范围在1-100
+
+# node亲和示例配置清单文件
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd  
+# pod亲和示例配置清单文件
+spec:
+  affinity:
+    podAffinity:
+    # podAntiAffinity:					# pod反亲和性
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+      	  # matchLabels:
+      	  #  app: fronted
+          matchExpressions:
+          - key: security
+            operator: In
+            values:
+            - S1
+        topologyKey: topology.kubernetes.io/zone		# 不在同一区域
+        # topologyKey: kubernetes.io/hostname			# 不在同一主机
+  containers:
+  - name: with-pod-affinity
+    image: k8s.gcr.io/pause:2.0
 ```
 
 ## 3.pod资源控制器资源

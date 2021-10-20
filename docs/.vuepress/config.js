@@ -81,6 +81,7 @@ module.exports = {
       verify: true, // 验证码
       recordIP: true
     },
+    
     sidebar: {
                 // Golang sidebar
                 "/Golang/": [{
@@ -558,12 +559,12 @@ function getGuideSidebar() {
             path: "/post/Prometheus & Consul/",
             collapsable: true,
             children: [
-                ["/post/Prometheus & Consul/Consul 入门", ":Consul 入门"],
-                ["/post/Prometheus & Consul/Prometheus + AlertManager", ":Prometheus + AlertManager"],
-                ["/post/Prometheus & Consul/Prometheus + Consul(服务发现)", ":Prometheus + Consul(服务发现)"],
-                ["/post/Prometheus & Consul/Prometheus in Docker", ":Prometheus in Docker"],
-                ["/post/Prometheus & Consul/Prometheus 安装与部署、Grafana", ":Prometheus 安装与部署、Grafana"],
-                ["/post/Prometheus & Consul/Prometheus 进阶", ":Prometheus 进阶"],
+                ["/post/Prometheus & Consul/Consul 入门", "Consul 入门"],
+                ["/post/Prometheus & Consul/Prometheus + AlertManager", "Prometheus + AlertManager"],
+                ["/post/Prometheus & Consul/Prometheus + Consul(服务发现)", "Prometheus + Consul(服务发现)"],
+                ["/post/Prometheus & Consul/Prometheus in Docker", "Prometheus in Docker"],
+                ["/post/Prometheus & Consul/Prometheus 安装与部署、Grafana", "Prometheus 安装与部署、Grafana"],
+                ["/post/Prometheus & Consul/Prometheus 进阶", "Prometheus 进阶"],
             ]
         },
         {

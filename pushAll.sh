@@ -6,7 +6,7 @@ set -e
 # rsync YYDS!无敌
 rsync -av --progress ./docs/* ../myDocs/docs/src/ --exclude ./docs/.vuepress/ --exclude ./docs/guide/
 
-sed -i '109,$d' ../myDocs/docs/src/.vuepress/config.js && sed -n '83,$p' ./docs/.vuepress/config.js  >> ../myDocs/docs/src/.vuepress/config.js
+sed -i '110,$d' ../myDocs/docs/src/.vuepress/config.js && sed -n '85,$p' ./docs/.vuepress/config.js  >> ../myDocs/docs/src/.vuepress/config.js
 
 echo -e "\n\n ========================= \n"
 
