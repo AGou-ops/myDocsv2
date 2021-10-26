@@ -79,6 +79,9 @@ module.exports = [
 
     'flowchart',
     "vuepress-plugin-boxx",
+    
+
+
     // ['vuepress-plugin-smooth-scroll'],
     //'vuepress-plugin-catalog-graph',
     // ["vuepress-plugin-auto-sidebar", {

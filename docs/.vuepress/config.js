@@ -157,6 +157,8 @@ module.exports = {
                     children: [
                         ["/k8s/Kubernetes Yaml quicklystart","⭐k8s Yaml quicklystart"],
                         ["/k8s/k8s command","⭐k8s command quicklystart"],
+                        ["/k8s/Kubernetes with Jenkins CICD","Kubernetes with Jenkins CICD"],
+                        ["/k8s/Prometheus+Grafana全方位监控Kubernetes集群","Prometheus+Grafana全方位监控Kubernetes集群"],
                         ["/k8s/kompose Basic","kompose Basic"],
                         ["/k8s/kubenetes远程调试工具","kubenetes远程调试工具"],
                         ["/k8s/Kubernetes REST API","Kubernetes REST API"],
@@ -204,6 +206,7 @@ module.exports = {
                 "/post/Prometheus & Consul/": getGuideSidebar(),
                 "/post/RabbitMQ/": getGuideSidebar(),
                 "/post/Shell/": getGuideSidebar(),
+                "/post/SpringBoot/": getGuideSidebar(),
                 "/post/Terraform/": getGuideSidebar(),
                 "/post/Varnish/": getGuideSidebar(),
                 "/post/Web Servers/": getGuideSidebar(),
@@ -440,6 +443,7 @@ function getGuideSidebar() {
                 ["/post/ELK/TCP+ELK日志收集", "TCP+ELK日志收集"],
                 ["/post/ELK/使用 docker-compose 部署 ELK", "使用 docker-compose 部署 ELK"],
                 ["/post/ELK/收集Java、Tomcat日志", "收集Java、Tomcat日志"],
+                ["/post/ELK/ELK+Kafka+Filebeat","ELK+Kafka+Filebeat"]
             ]
         },
         {
@@ -585,6 +589,15 @@ function getGuideSidebar() {
                 ["/post/Shell/Linux Shell 实用命令及使用场景", "Linux Shell 实用命令及使用场景"],
                 ["/post/Shell/Shell getopts 样例", "Shell getopts 样例"],
                 ["/post/Shell/userful-shell", "userful-shell"],
+            ]
+        },
+        {
+            title: "SpringBoot",
+            path: "/post/SpringBoot/",
+            collapsable: true,
+            children: [
+                ["/post/SpringBoot/SpringBoot Quicklystart", "SpringBoot Quicklystart"],
+                ["/post/SpringBoot/SpringBoot in Docker", "SpringBoot in Docker"],
             ]
         },
         {
