@@ -72,6 +72,7 @@ cfssl是一个开源的证书管理工具，使用json文件生成证书，相�
 [root@binary-k8s-master1 ~]\# mv cfssl-certinfo_linux-amd64 /usr/bin/cfssl-certinfo
 ```
 
+
 ## 2.操作系统初始化配置
 
 ```bash

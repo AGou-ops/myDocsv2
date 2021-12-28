@@ -15,7 +15,7 @@ features:
 footer: MIT Licensed | Copyright © 2021-present by AGou-ops
 ---
 
-  
+
 ---
 
 
@@ -29,7 +29,7 @@ footer: MIT Licensed | Copyright © 2021-present by AGou-ops
 >
 > **[Do What the Fuck You Want to Public License](http://www.wtfpl.net/)**【意思自行体会】
 >
-> *The WTFPL is a very permissive license for software and other scientific or artistic works that offers a great degree of freedom. In fact, it is probably the best license out there. *
+> *The WTFPL is a very permissive license for software and other scientific or artistic works that offers a great degree of freedom. In fact, it is probably the best license out there.*
 
 
 ![图片来源于WTFPL官网](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/image-20211022084650825.png)

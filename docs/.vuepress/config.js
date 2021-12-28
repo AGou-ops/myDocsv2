@@ -25,7 +25,12 @@ module.exports = {
     ["script", {
         "language": "javascript",
         "type": "text/javascript",
-        "src": "/js/gtag.js"
+        "src": "https://www.googletagmanager.com/gtag/js?id=G-2DZCW6NJZF"
+      }],
+      ["script", {
+        "language": "javascript",
+        "type": "text/javascript",
+        "content": 'function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-2DZCW6NJZF");'
       }],
   ],
 
@@ -483,7 +488,6 @@ function getGuideSidebar() {
                     ]
                 },
                 ["/post/FileSystem/NFS 基础及实战", "NFS 基础及实战"],
-                ["/post/FileSystem/Samba 基础及实战", "Samba 基础及实战"],
                 ["/post/FileSystem/SAMBA 基础及实战", "SAMBA 基础及实战"],
                 ["/post/FileSystem/smb.conf详解", "smb.conf详解"],
                 ["/post/FileSystem/TFTP", "TFTP"],

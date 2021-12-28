@@ -1,5 +1,3 @@
-# Dubbo Basic 
-
 # Dubbo Basic
 
 [TOC]

@@ -1,5 +1,3 @@
-# Redis Cluster    
-
 # Redis Cluster
 
 ## Redis-Cluster 集群概念
@@ -47,6 +45,12 @@ Redis 集群使用数据分片（sharding）而非一致性哈希（consistency 
 主节点只会处理自己负责槽位的命令请求，其它槽位的命令请求，该主节点会返回客户端一个转向错误；
 
 客户端*根据错误中包含的地址和端口*重新向正确的负责的主节点发起命令请求。
+
+### 主从复制原理
+
+![image-20211103173116252](https://agou-images.oss-cn-qingdao.aliyuncs.com/others/image-20211103173116252.png)
+
+图片来源于网络。
 
 ## Redis-Cluster 集群搭建
 

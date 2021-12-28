@@ -44,7 +44,7 @@
         data() {
             return {
                 rewarder,
-                rewardImg: "/znote/vuepress/zanshang01.png"
+                rewardImg: "#"
             }
         }
     }
