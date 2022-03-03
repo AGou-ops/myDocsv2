@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 # cp -rnf  ./docs/* ../myDocs/docs/src/
@@ -10,11 +10,11 @@ sed -i '110,$d' ../myDocs/docs/src/.vuepress/config.js && sed -n '85,$p' ./docs/
 
 echo -e "\n\n ========================= \n"
 
-/usr/bin/sh ./push.sh
+/bin/bash ./push.sh
 
 echo  "缓一缓"
 sleep 0.5
 
 cd ../myDocs/docs
 
-/usr/bin/sh ./push.sh
+/usr/bin/bash ./push.sh

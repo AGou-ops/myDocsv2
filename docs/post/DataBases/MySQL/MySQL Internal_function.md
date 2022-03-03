@@ -1,10 +1,26 @@
-> 来源：https://www.runoob.com/mysql/mysql-functions.html
+> 部分内容来源：
+>
+> - https://www.runoob.com/mysql/mysql-functions.html
+>
+> - https://www.cnblogs.com/kissdodog/p/4168721.html
 
 # MySQL 函数
 
 MySQL 有很多内置的函数，以下列出了这些函数的说明。
 
 ------
+
+## MySQL 常用函数
+
+| 函数     | 描述             | 实例                                                         |
+| -------- | ---------------- | ------------------------------------------------------------ |
+| JSON_SET | 修改JSON某个字段 | UPDATE `tb_saas_contract` SET  DATA = json_set( DATA, "$.text_18", "张三" ) |
+|          |                  |                                                              |
+|          |                  |                                                              |
+
+
+
+---
 
 ## MySQL 字符串函数
 
@@ -143,6 +159,20 @@ MySQL 有很多内置的函数，以下列出了这些函数的说明。
 | YEARWEEK(date, mode)              | 返回年份及第几周（0到53），mode 中 0 表示周天，1表示周一，以此类推 | `SELECT YEARWEEK("2017-06-15"); -> 201724`                   |
 
 ------
+
+
+
+## MySQL 加密函数
+
+| 函数名                                           | 描述                                                         | 实例                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| PASSWORD(str)                                    | 该函数可以对字符串str进行加密，一般情况下，PASSWORD(str)用于给用户的密码加密。 | SELECT PASSWORD('123')                                       |
+| MD5(str)                                         | MD5(str)函数可以对字符串str进行散列，可以用于一些普通的不需要解密的数据加密。 | SELECT md5('123')                                            |
+| ENCODE(str,pswd_str)与DECODE(crypt_str,pswd_str) | ENCODE函数可以使用加密密码pswd_str来加密字符串str，加密结果是二进制数，需要使用BLOB类型的字段保存。该函数与DECODE是一对，需要同样的密码才能够解密。 | SELECT ENCODE('123','xxoo')<br/>    ->;vx<br/>SELECT DECODE(';vx','xxoo')<br/>    ->123 |
+
+
+
+---
 
 ## MySQL 高级函数
 

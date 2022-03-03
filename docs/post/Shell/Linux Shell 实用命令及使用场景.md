@@ -56,6 +56,16 @@
 > du -S /home/suofeiya/mycharts/ | sort -rn | sed '{11,$D};=' | sed 'N; s/\n/ /' | awk 'BEGIN {print "序号\t大小(k)\t文件夹"}{printf $1 ":" "\t" $2 "\t" $3 "\n"}'
 > # 将输出存到指定文件
 > exec > result.txt
+> 
+> # 结合read可用于读取文件内容
+> exec 0< TimeOut.sh
+> count=1                            # 赋值语句，不加空格
+> 
+> while read line                    # read读到的值放在line中
+> do 
+>     echo "Line $count:$line"
+>     count=$[ $count + 1 ]          # 注意中括号中的空格
+> done
 > ```
 >
 
@@ -88,6 +98,50 @@
 > ```shell
 > trap '' 2 3 8
 > ```
+
+- `read`：获取用户输入
+
+> 选项：
+>
+> - `-t`：输入超时；
+> - `-p`：添加提示语；
+> - `-s`：不回显输入，用于密码输入；
+>
+> **使用场景：**
+>
+> ```bash
+> read -p "Enter your name:" name [var1 var2]              # 参数-p指定一个提示语句，并把键盘输入放入变量name，可同时输入多个变量
+> echo "hello $name, welcome to my program"    # 显示输入信息
+> 
+> # 输入超时处理
+> if read -t 5 -p "please enter your name:" name    # -t，设置输入超时时间（本语句设置超时时间为5秒），默认单位是秒；-p，指定输入提示
+> then                                              # 如果不超过5秒
+>     echo "hello $name ,welcome to my script"
+> else                                              # 超过5秒
+>     echo "Timeout"
+> fi
+> # 输入进行判断
+> read -n2 -p "Do you want to continue [Y/N]?" answer
+> case $answer in
+> (Y | y)
+>       echo "fine, continue";;
+> (N | n)
+>       echo "ok, good bye";;
+> (*)
+>       echo "error choice";;
+> esac
+> 
+> # 此外还可以用于读取文件内容
+> count=1                           # 赋值语句，不加空格
+> 
+> cat Timeout.sh | while read line  # cat命令查看文件Timeout.sh，然后管道给read命令，作为read的输入；read读到的值放在line中
+> do                                # while循环
+>    echo "Line $count:$line"
+>    count=$[ $count + 1 ]          # 注意中括号中的空格。
+> done
+> ```
+>
+> 
 
 - `select`: 获取选项
 
@@ -145,4 +199,7 @@
 >     fi
 > ```
 >
-> 
+
+## 参考链接
+
+文章内容收集于网络，个人整理使用。

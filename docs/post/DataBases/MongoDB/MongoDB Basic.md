@@ -267,3 +267,4 @@ roles: [ { role: "readWrite", db: "app1" },
 - MongoDB Database Command: https://docs.mongodb.com/manual/reference/command/
 - MongoDB CRUD: https://docs.mongodb.com/manual/crud/
 - MongoDB 菜鸟教程: https://www.runoob.com/mongodb/
+- https://blog.csdn.net/weixin_44953658/article/details/122102059?spm=1001.2014.3001.5501

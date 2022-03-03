@@ -135,7 +135,7 @@ SELECT 字段列表 FROM <TABLE_NAME> [其他子句]
 /* SELECT */ ------------------
 SELECT [ALL|DISTINCT] select_expr FROM -> WHERE --> GROUP BY [合计函数] -> HAVING -> ORDER BY -> LIMIT
 
-a. select_expr
+select_expr
     -- 可以用 * 表示所有字段。
         select * from tb;
     -- 可以使用表达式（计算公式、函数调用、字段也是个表达式）
@@ -144,7 +144,7 @@ a. select_expr
         - 使用 as 关键字，也可省略 as.
         select stu+10 as add10 from tb;
 
-b. FROM 子句
+FROM 子句
     用于标识查询来源。
     -- 可以为表起别名。使用as关键字。
         SELECT * FROM tb1 AS tt, tb2 AS bb;
@@ -156,7 +156,7 @@ b. FROM 子句
         SELECT * FROM table1 USE INDEX (key1,key2) WHERE key1=1 AND key2=2 AND key3=3;
         SELECT * FROM table1 IGNORE INDEX (key3) WHERE key1=1 AND key2=2 AND key3=3;
 
-c. WHERE 子句
+WHERE 子句
     -- 从from获得的数据源中进行筛选。
     -- 整型1表示真，0表示假。
     -- 表达式由运算符和运算数组成。
@@ -168,9 +168,21 @@ c. WHERE 子句
             <=>与<>功能相同，<=>可用于null比较
        	-- in
        	SELECT * FROM <TBL_NAME> a WHERE (a.<COLUMN1>,A.<COLUMN2>) IN/= (SELECT ...)
-       	
 
-d. GROUP BY 子句, 分组子句
+UNION 子句
+		-- 从多个表中查询出相似结构的数据，并且返回一个结果集
+		-- 从单个表中多次SELECT查询，将结果合并成一个结果集返回。
+		
+		-- Union检索遇到不一致的字段名称时候，会使用第一条SELECT的查询字段名称，或者你使用别名来改变查询字段名称。
+		
+		-- 额外参数：
+			-- ALL：可选，返回所有结果集，包含重复数据
+			-- DISTINCT：可选，删除结果集中的重复数据，但默认情况下UNION操作符会自动删除重复数据，故此项参数加不加没什么影响
+			-- 'str' AS TABLE_NAME：用于区分多个联合表的标识字段列
+				(SELECT *,'tbl1' AS TABLE_NAME  FROM <TBL_NAME> a WHERE ...) UNION [ALL|DISTINCT] (SELECT *,'tbl2' AS TABLE_NAME ...) ORDER BY id DESC
+
+
+GROUP BY 子句, 分组子句
     GROUP BY 字段/别名 [排序方式]
     分组后会进行排序。排序规则，ASC升序（`DEFAULT`），DESC降序
 	SELECT user_id 用户id, count(id) 数量 FROM tbl GROUP BY user_id;
@@ -183,7 +195,7 @@ d. GROUP BY 子句, 分组子句
     avg 求平均值
     group_concat 返回带有来自一个组的连接的非NULL值的字符串结果。组内字符串连接。
 
-e. HAVING 子句，条件子句
+HAVING 子句，条件子句
     `与 where 功能、用法相同，执行时机不同。
     where 在开始时执行检测数据，对原数据进行过滤。
     having 对筛选出的结果再次进行过滤。
@@ -192,17 +204,17 @@ e. HAVING 子句，条件子句
     where 不可以使用合计函数。一般需用合计函数才会用 having`
     SQL标准要求HAVING必须引用GROUP BY子句中的列或用于合计函数中的列。
 
-f. ORDER BY 子句，排序子句
+ORDER BY 子句，排序子句
     order by 排序字段/别名 排序方式 [,排序字段/别名 排序方式]...
     升序：ASC，降序：DESC
     支持多个字段的排序。
 
-g. LIMIT 子句，限制结果数量子句
+LIMIT 子句，限制结果数量子句
     仅对处理好的结果进行数量限制。将处理好的结果的看作是一个集合，按照记录出现的顺序，索引从0开始。
     limit 起始位置, 获取条数
     省略第一个参数，表示从索引0开始。limit 获取条数
 
-h. DISTINCT, ALL 选项
+DISTINCT, ALL 选项
     distinct 去除重复记录
     默认为 all, 全部记录
 ```
