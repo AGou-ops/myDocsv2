@@ -18,6 +18,8 @@ sed -i '' -e 's@\.\/@/myDocsv2/post/@g' TMP_FILE
 sed -i '' -e 's#\.md#\.html#g' TMP_FILE
 sed -i '' -e 's#\.html<#<#g' TMP_FILE
 sed -i '' -e 's@/myDocsv2/post//myDocsv2/post/00Tree.html/">.<@/myDocsv2/">/root<@' TMP_FILE
+sed -i '' -e 's@00Tree\.html/@@g' TMP_FILE
+
 
 sleep 0.5
 mv ./TMP_FILE ../guide/README.md
