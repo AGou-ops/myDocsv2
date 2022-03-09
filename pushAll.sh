@@ -17,4 +17,4 @@ sleep 0.5
 
 cd ../myDocs/docs
 
-/usr/bin/bash ./push.sh
+/bin/bash ./push.sh
