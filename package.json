@@ -25,7 +25,6 @@
 		"moment": "^2.24.0",
 		"vuepress": "^1.8.2",
 		"vuepress-plugin-boxx": "0.0.7",
-		"vuepress-plugin-catalog-graph": "^0.2.8",
 		"vuepress-plugin-container": "^2.1.5",
 		"vuepress-plugin-copyright": "^1.0.2",
 		"vuepress-plugin-flowchart": "1.4.3",
