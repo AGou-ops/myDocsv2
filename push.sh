@@ -1,5 +1,5 @@
 #/bin/bash
-set -x
+
 cd ./docs/post
 tree -H . > TMP_FILE
 
