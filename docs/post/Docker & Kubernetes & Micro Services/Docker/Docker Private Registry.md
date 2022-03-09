@@ -83,8 +83,6 @@ REPOSITORY             TAG                 IMAGE ID            CREATED          
 10.0.0.12:5000/nginx   v5                  e74b49bcb92b        23 hours ago        16MB
 ```
 
- 
-
 
 
 ### VMware harbor
