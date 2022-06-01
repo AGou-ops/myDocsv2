@@ -1,5 +1,40 @@
 # Redis 基础
 
+```bash
+# redis登录
+$ redis-cli -h <host> -p <port> -a <password>
+redis 127.0.0.1:6379> PING
+PONG
+```
+
+## 用户认证登录及修改密码
+
+reids的默认配置文件为`/etc/redis.conf`，如果要修改密码，需要更改：
+
+```bash
+# 找到改行，并取消注释
+requirepass <YOUR_PASSWD_HERE>
+```
+
+完成之后重启Redis：
+
+```bash
+service redis restart		# 如果配置成服务的话
+# 或者
+/usr/local/bin/redis-cli shutdown
+/usr/local/bin/redis-server /etc/redis.conf
+```
+
+命令行中修改密码（无需重启服务）：
+
+```bash
+127.0.0.1:6379> config set requirepass <YOUR_PASSWD_HERE>
+OK
+127.0.0.1:6379> config get requirepass
+1) "requirepass"
+2) "mUWPMPyv8I069o"
+```
+
 ## 数据类型
 
 String： 字符串类型

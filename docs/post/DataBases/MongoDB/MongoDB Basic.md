@@ -63,7 +63,7 @@ switched to db test
 { "ok" : 1 }
 ```
 
-### 集合操作
+### 集合操作(CURD)
 
 手动创建集合:
 
@@ -88,6 +88,8 @@ c
 # 或者
 > show tables
 ```
+
+#### 增 
 
 创建文档时自动创建集合:
 
@@ -129,9 +131,10 @@ inventory
 使用函数批量插入:
 
 ```bash
-> for(i=0;i<10000;i++){db.log.insert({"uid":i,"name":"mongodb","age":6,"date":new
-Date()})}
+> for(i=0;i<10000;i++){db.log.insert({"uid":i,"name":"mongodb","age":6,"date":newDate()})}
 ```
+
+#### 删
 
 删除集合或者集合内容:
 
@@ -142,6 +145,8 @@ true
 > db.log.remove({})
 ```
 
+#### 改
+
 重命名集合:
 
 ```bash
@@ -149,7 +154,17 @@ true
 { "ok" : 1 }
 > show tables
 RENAMED_c
+# 根据条件进行批量修改，默认情况下monggoDB只会修改一条document，如果要修改多条document，则需要设置multi为true.
+> db.getCollection("doc").update({ctime:{$lt: "2022-05-09"}},{$set:{status:-1}},{multi:true});
 ```
+
+#### 查
+
+```bash
+> > db.getCollection("doc").find({}).pretty()
+```
+
+
 
 查看文档:
 
@@ -264,6 +279,7 @@ roles: [ { role: "readWrite", db: "app1" },
 
 ## 参考链接
 
+- MongoDB Tutorial:https://www.tutorialspoint.com/mongodb/index.htm
 - MongoDB Database Command: https://docs.mongodb.com/manual/reference/command/
 - MongoDB CRUD: https://docs.mongodb.com/manual/crud/
 - MongoDB 菜鸟教程: https://www.runoob.com/mongodb/

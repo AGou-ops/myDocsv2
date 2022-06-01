@@ -12,10 +12,10 @@ tree -H . > TMP_FILE
 # ex -sc '%s@\.\/@/myDocsv2/post/@|x' TMP_FILE
 # ex -sc '%s/\.md/\.html/|x' TMP_FILE
 # ex -sc '%s@\.html<@<@|x' TMP_FILE
-
+ 
 # 还是用sed吧
 sed -i '' -e 's@\.\/@/myDocsv2/post/@g' TMP_FILE
-sed -i '' -e 's#\.md#\.html#g' TMP_FILE
+sed -i '' -e 's#\.md#\.html#g' TMP_FILE 
 sed -i '' -e 's#\.html<#<#g' TMP_FILE
 sed -i '' -e 's@/myDocsv2/post//myDocsv2/post/00Tree.html/">.<@/myDocsv2/">/root<@' TMP_FILE
 sed -i '' -e 's@00Tree\.html/@@g' TMP_FILE

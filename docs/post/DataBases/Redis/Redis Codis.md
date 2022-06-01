@@ -1,6 +1,4 @@
-# Redis Codis    
-
-# Redis Codis 
+# Redis Codis
 
 [TOC]
 

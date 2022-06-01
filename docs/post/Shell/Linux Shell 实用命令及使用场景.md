@@ -175,6 +175,16 @@
 > EOF
 > ```
 
+- 简单端口探测：
+
+>**使用场景：**
+>
+>服务依赖性探测，当所依赖的服务正常启动之后，再启动我们的程序
+>
+>```bash
+>/bin/sh -c 'while ! nc -z db 3306; do sleep 1; done; ./docker/app/bin/init.sh;'
+>```
+
 ## SYSTEM FILES
 
 - `/etc/os-release`：查看系统名称、版本、基于版本、版本代号、帮助信息、系统官方主页等；

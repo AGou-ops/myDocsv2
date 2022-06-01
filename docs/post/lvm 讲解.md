@@ -452,6 +452,16 @@ tmpfs                183M     0  183M    0% /run/user/0
   vg1   3   1   0 wz--n- <2.99g <2.70g
 ```
 
+扩容lv(vg满足容量要求)：
+
+```bash
+ lvextend -L +20GB /dev/mapper/ubuntu--vg-ubuntu--lv
+
+ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+```
+
+
+
 ### 二、磁盘故障小案例
 
 由于我们之前写了配置命令到/etc/fstab文件里面，当我们做完lvm实验后重启虚假机发现进不了系统了。类似这样的问题往往是因为磁盘挂载异常的问题。

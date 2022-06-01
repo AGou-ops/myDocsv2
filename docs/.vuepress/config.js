@@ -118,7 +118,15 @@ module.exports = {
                             ["/k8s/Installation/使用 Kubespray 部署", "使用 Kubespray 部署"],
                             ["/k8s/Installation/使用国内源及相关小工具", "使用国内源及相关小工具"],
                         ]
+                    },{
+                        title: "K8s 实战案例",
+                        path: "/k8s/实战案例/",
+                        collapsable: true,
+                        children: [
+                            ["/k8s/实战案例/SpringCloud微服务电商系统在Kubernetes集群中上线详细教程", "SpringCloud微服务电商系统在Kubernetes集群中上线详细教程"],
+                        ]
                     },
+
                     {
                     title: "k8s 快速手册",
                     path: "/k8s/Quicklystart/",
@@ -170,6 +178,7 @@ module.exports = {
                         ["/k8s/k3d","k3d"],
                         ["/k8s/Minikube Basic","Minikube Basic"],
                         ["/k8s/Remote access k8s","Remote access k8s"],
+                        ["/k8s/k8s 图解大全","k8s 图解大全"],
                     ]
                 },
             ],
@@ -225,7 +234,6 @@ module.exports = {
                 "/post/Zabbix/": getGuideSidebar(),
                 "/post/Zookeeper/": getGuideSidebar(),
                 "/post/工作面试题/": getGuideSidebar(),
-
             }
   },
 }
@@ -450,7 +458,8 @@ function getGuideSidebar() {
                 ["/post/ELK/TCP+ELK日志收集", "TCP+ELK日志收集"],
                 ["/post/ELK/使用 docker-compose 部署 ELK", "使用 docker-compose 部署 ELK"],
                 ["/post/ELK/收集Java、Tomcat日志", "收集Java、Tomcat日志"],
-                ["/post/ELK/ELK+Kafka+Filebeat","ELK+Kafka+Filebeat"]
+                ["/post/ELK/ELK+Kafka+Filebeat","ELK+Kafka+Filebeat"],
+                ["/post/ELK/Logstash 日志分流","Logstash 日志分流"]
             ]
         },
         {
@@ -570,6 +579,7 @@ function getGuideSidebar() {
             collapsable: true,
             children: [
                 ["/post/Prometheus & Consul/Consul 入门", "Consul 入门"],
+                ["/post/Prometheus & Consul/influxDB、Telegraf Basic", "influxDB、Telegraf Basic"],
                 ["/post/Prometheus & Consul/Prometheus + AlertManager", "Prometheus + AlertManager"],
                 ["/post/Prometheus & Consul/Prometheus + Consul(服务发现)", "Prometheus + Consul(服务发现)"],
                 ["/post/Prometheus & Consul/Prometheus in Docker", "Prometheus in Docker"],
@@ -644,6 +654,7 @@ function getGuideSidebar() {
                         ["/post/Web Servers/Jvm & Tomcat/Tomcat Session(Redis with Nginx)", "Tomcat Session(Redis with Nginx)"],
                         ["/post/Web Servers/Jvm & Tomcat/Tomcat 常用设置及安全管理规范", "Tomcat 常用设置及安全管理规范"],
                         ["/post/Web Servers/Jvm & Tomcat/Tomcat 调优", "Tomcat 调优"],
+                        ["/post/Web Servers/Jvm & Tomcat/Tomcat中间件方方面面储备知识", "Tomcat中间件方方面面储备知识"],
                     ]
                 },
                 {
@@ -731,7 +742,7 @@ function getGuideSidebar() {
             collapsable: true,
             children: [
                 ["/post/工作面试题/Redis", "Redis"],
-
+                ["/post/工作面试题/选择公司", "选择公司"],
             ]
         },
         { // Other here.
